@@ -1,0 +1,12 @@
+<h2>Results for your search and select one</h2>
+<ol>
+    <% data["Search"].forEach(function(movie){ %>
+        <li><%= movie["Title"] %></li>
+    <% }); %>
+</ol>
+<% var k = 0; %>
+<form action="/imdbid" method="GET">
+    <input type="text" placeholder = "<%= search %>" name="search" value = "<%=search%>" readonly>
+    <input type="text" placeholder="enter number" name = "mname">
+    <input type="submit" value="submit">
+</form>

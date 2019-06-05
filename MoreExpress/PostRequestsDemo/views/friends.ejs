@@ -1,0 +1,11 @@
+<h1>Friends List:-></h1>
+
+<% friends.forEach(function(friend){ %>
+    <li><%= friend.toUpperCase() %></li>
+<% }); %>
+
+<form action="/addfriend" method = "post">
+    <input type="text" name="friend" placeholder="Add new Friend">
+    <button>Add Friend</button>
+    
+</form>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color:beige">
+    <h1>Donors with requested blood type <%= bg %></h1>
+    <table border="1" cellspacing="2" class="table text-center">
+        <tr>
+            <th class="text-center">
+                FirstName
+            </th>
+            <th class="text-center">
+                Mobile Number
+            </th>
+        </tr>
+        <% allusers.forEach(function(user){ %>
+        <% if(user['bloodgroup'] == bg){ %>
+            <tr>
+                <td><%=user['firstname']%></td>
+                <td><%=user['mobile']%></td>
+            </tr>
+            <% } %>
+    <% }) %>
+    </table>
+    <button class="btn btn-primary text-center" ><a href="/" style="color:white">Go Back To Home Page</a></button>
+</body>
+</html>

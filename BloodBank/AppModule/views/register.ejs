@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Registration Form</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<nav class="navbar navbar-default navbar-inverse">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="/">
+						<img src="https://www.brmsonline.com/wp-content/uploads/2018/02/Donate-Blood.jpg" alt="Donate Blood" width="90px" height="30px">
+					</a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#">Register</a></li>
+						<li><a href="/requests">Request</a></li>
+					</ul>
+					</div><!-- /.navbar-collapse -->
+					</div><!-- /.container-fluid -->
+				</nav>
+				<form action="/adduser" method="GET">
+					<div>
+						<label for="fname">First Name </label>
+						<input type="text" name="fname" placeholder="First Name" id="fname" pattern="[a-zA-Z]+" required>
+					</div>
+					<br>
+					<div>
+						<label for="lname">Last Name </label>
+						<input type="text" name="lname" placeholder="Last Name" id="lname" pattern="[a-zA-Z]+" required>
+					</div>
+					<br>
+					<div>
+						<label for="dob">Date Of Birth </label>
+						<input type="date" name="dob" required>
+					</div>
+					<br>
+					<div>
+						<label for="type">Blood Group </label>
+						<select name="type" id="bg">
+							<option disabled="1" selected="1" hidden="1">Group</option>
+							<option>A+</option>
+							<option>B+</option>
+							<option>O+</option>
+							<option>AB+</option>
+							<option>A-</option>
+							<option>B-</option>
+							<option>O-</option>
+							<option>AB-</option>
+						</select>
+					</div>
+					<br>
+					<div>
+						<label for="location">Location</label>
+						<input type="text" name="location" placeholder="Hyderabad" required id="loc" pattern="[a-zA-Z]+">
+					</div>
+					<br>
+					<div>
+						<label for="mbo">Mobile Number</label>
+						<input type="text" required name="mbo" id="mbo" pattern="[0-9]{10}">
+					</div>
+					<br>
+					<input type="submit" name="Submit" value="Submit" id="submit">
+				</form>
+			</body>
+		</html>
